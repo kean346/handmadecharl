@@ -1954,3 +1954,25 @@
     font-size: 10.45vw;
   }
 }
+/* Phone-only refinements. Desktop composition remains unchanged. */
+@media(max-width:600px){
+.workshop-site .site-header{gap:10px;padding-inline:18px}
+.workshop-site .site-header .brand{min-width:0;flex-shrink:1}
+.workshop-site .site-header .brand>span{font-size:22px}
+.workshop-site .site-header .brand-by{font-size:20px;margin-left:5px}
+.workshop-site .header-quote{white-space:nowrap;flex-shrink:0;margin-left:auto;margin-right:0;padding:10px;font-size:8px;gap:7px;min-height:40px}
+.workshop-site .mobile-menu-toggle{width:38px;min-width:38px;height:44px;flex-shrink:0}
+.workshop-site .hero-prev-next button{width:36px;height:36px}
+.workshop-site .gallery-filters>button{min-height:42px}
+.workshop-site .quote-form input:not([type=file]),.workshop-site .quote-form textarea,.workshop-site .quote-form select,.workshop-site .engraving-input-group input{font-size:16px}
+.workshop-site .quote-form input:not([type=file]),.workshop-site .quote-form select{min-height:46px}
+.workshop-site .example-options>label{min-height:44px}
+}
+@media(max-width:360px){
+.workshop-site .site-header{gap:7px;padding-inline:14px}
+.workshop-site .site-header .brand>span{font-size:19px}
+.workshop-site .site-header .brand-by{font-size:18px;margin-left:4px}
+.workshop-site .site-header .brand small{font-size:4px;letter-spacing:.15em}
+.workshop-site .header-quote{font-size:7px;padding:9px 8px;gap:5px}
+.workshop-site .mobile-menu-toggle{min-width:32px;width:32px}
+}
