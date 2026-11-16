@@ -3075,3 +3075,18 @@
     font-size: 8px;
   }
 }
+/* Keep sidebar utilities reachable on short laptop screens. */
+.crm-sidebar{height:100dvh;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#65705a #292d28}
+.crm-sidebar-brand,.crm-workspace-switch,.crm-sidebar nav,.crm-sidebar-divider,.crm-sidebar-bottom{flex-shrink:0}
+.crm-sidebar-bottom{padding-top:24px}
+@media(max-height:820px) and (min-width:601px){.crm-sidebar{padding-top:20px}.crm-sidebar-brand{padding-bottom:20px}.crm-workspace-switch{margin-bottom:20px}.crm-sidebar nav>button{padding-block:10px}.crm-sidebar-divider{margin-block:18px}.crm-local-notice{padding:12px;margin-bottom:14px}.crm-owner{padding-top:14px}.crm-sidebar-bottom{padding-top:20px}}
+/* Photo-led overview: generous scenery with calm inset information panels. */
+.crm-welcome{min-height:365px;padding:38px;border-radius:12px;align-items:flex-end}
+.crm-welcome>img{width:100%;object-position:72% 58%;filter:saturate(.85) brightness(.92)}
+.crm-welcome-shade{background:linear-gradient(90deg,#292c25e8 0%,#292c2590 38%,#292c2510 75%),linear-gradient(0deg,#292c2580,transparent 65%)}
+.crm-welcome h2{font-size:58px;max-width:550px}
+.crm-focus-card{width:245px;padding:24px;background:#f4f0e9ed;border:0;border-radius:12px;box-shadow:none}
+.crm-focus-card strong{font-size:46px}.crm-focus-card>p{font-size:11px}.crm-focus-card>button{font-size:10px}
+.crm-panel,.crm-stat{border-radius:10px;box-shadow:none}.crm-stat-grid{position:relative;margin-top:-18px;margin-inline:18px;z-index:2}.crm-stat{background:#f4f0e9f5;backdrop-filter:blur(14px)}
+@media(max-width:820px){.crm-welcome{min-height:330px;padding:28px}.crm-welcome h2{font-size:44px}.crm-focus-card{width:190px;padding:18px}.crm-focus-card>p{font-size:9px}.crm-focus-card>button{font-size:8px}}
+@media(max-width:600px){.crm-welcome{min-height:390px;padding:25px 22px;display:block}.crm-welcome h2{font-size:42px}.crm-focus-card{width:100%;padding:16px;margin-top:27px}.crm-focus-card strong{font-size:32px}.crm-focus-card>button{font-size:8px}.crm-stat-grid{margin-top:0;margin-inline:0}.crm-sidebar{padding-bottom:max(22px,env(safe-area-inset-bottom))}}
