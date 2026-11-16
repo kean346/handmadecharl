@@ -7,6 +7,8 @@ export interface Product {
   category: Category
   description: string
   images: string[]
+  studioImages: string[]
+  studioFocus?: string
   material: string
   imageClass?: string
 }
@@ -37,4 +39,8 @@ export interface Enquiry {
   notes: string
   reference: ReferenceImage | null
   status: EnquiryStatus
+  isSample?: boolean
+  updatedAt?: string
+  internalNotes?: { id: string; text: string; at: string }[]
+  activity?: { id: string; text: string; at: string }[]
 }

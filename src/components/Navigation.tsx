@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import { ArrowUpRight, Menu, X } from 'lucide-react'
 import { Brand } from './Shared'
+import { Link } from 'react-router-dom'
+import { LayoutDashboard } from 'lucide-react'
 
 const links = [
   { href: '#our-work', name: 'Our Work' },
@@ -35,6 +37,10 @@ export default function Navigation() {
             {link.name}
           </a>
         ))}
+        <Link className="nav-link nav-workbench" to="/demo-dashboard">
+          <LayoutDashboard size={14} />
+          Workshop CRM
+        </Link>
       </nav>
       <a href="#contact" className="button button-dark header-quote">
         Request a Quote <ArrowUpRight size={17} />
@@ -66,6 +72,10 @@ export default function Navigation() {
                 <ArrowUpRight size={25} />
               </a>
             ))}
+            <Link to="/demo-dashboard" className="mobile-crm-link">
+              <small>05</small>Workshop CRM
+              <ArrowUpRight size={25} />
+            </Link>
             <p>Thoughtfully made. Here in South Africa.</p>
           </motion.nav>
         )}

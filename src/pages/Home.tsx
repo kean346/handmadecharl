@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState, type CSSProperties } from 'react'
 import { AnimatePresence } from 'motion/react'
 import { useLocation } from 'react-router-dom'
 import Navigation from '../components/Navigation'
@@ -10,6 +10,7 @@ import QuoteForm from '../components/QuoteForm'
 import ProductDetail from '../components/ProductDetail'
 import Footer from '../components/Footer'
 import type { Category, Product, QuoteDraft } from '../types'
+import '../styles/workshop.css'
 
 export default function Home() {
   const [filter, setFilter] = useState<Category | 'All'>('All')
@@ -18,6 +19,7 @@ export default function Home() {
     source: 'featured' | 'product'
   } | null>(null)
   const [draft, setDraft] = useState<QuoteDraft | null>(null)
+  const [sceneColor, setSceneColor] = useState('#38271d')
   const { hash } = useLocation()
   const close = useCallback(() => setSelected(null), [])
   useEffect(() => {
@@ -28,24 +30,27 @@ export default function Home() {
     setDraft(next)
     setSelected(null)
     window.setTimeout(() => {
-      document
-        .getElementById('contact')
-        ?.scrollIntoView({
-          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
-            ? 'instant'
-            : 'smooth',
-        })
+      document.getElementById('contact')?.scrollIntoView({
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+          ? 'instant'
+          : 'smooth',
+      })
     }, 150)
   }
   return (
     <>
-      <div inert={!!selected} id="top">
+      <div
+        inert={!!selected}
+        id="top"
+        className="workshop-site"
+        style={{ '--hero-theme': sceneColor } as CSSProperties}
+      >
         <a className="skip-link" href="#collection">
           Skip to the collection
         </a>
         <Navigation />
         <main>
-          <Hero />
+          <Hero onSceneChange={setSceneColor} />
           <div className="craft-ribbon" aria-label="Our approach">
             <span>Thoughtfully designed</span>
             <i />

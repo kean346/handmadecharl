@@ -53,6 +53,7 @@ test('gallery filters, featured detail, alternate photos, keyboard close and enq
   await card.click()
   const dialog = page.getByRole('dialog')
   await expect(dialog.getByRole('heading')).toHaveText('A little fairy house')
+  await dialog.getByRole('button', { name: 'Original photos' }).click()
   await dialog.getByRole('button', { name: 'View photograph 2' }).click()
   await expect(dialog.locator('.detail-main-image img')).toHaveAttribute(
     'src',

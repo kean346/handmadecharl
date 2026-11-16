@@ -80,7 +80,21 @@ try {
   await expect(page.locator('.quote-success')).toBeVisible()
   await page.getByRole('link', { name: 'View the demo enquiry' }).click()
   await expect(page.locator('.enquiry-row')).toHaveCount(1)
+  await page.getByRole('button', { name: 'Load sample enquiries' }).click()
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }))
+  await page.waitForTimeout(800)
   await shot(page, 'demo-dashboard.png')
+  await shot(page, 'demo-dashboard-full.png', { fullPage: true })
+  await page
+    .getByRole('navigation', { name: 'Workshop navigation' })
+    .getByRole('button', { name: 'Pipeline', exact: true })
+    .click()
+  await shot(page, 'crm-pipeline.png', { fullPage: true })
+  await page.locator('.crm-kanban-card').first().click()
+  await expect(page.getByRole('dialog')).toBeVisible()
+  await page.waitForTimeout(400)
+  await shot(page, 'crm-enquiry-detail.png')
+  await page.keyboard.press('Escape')
 
   const mobile = await browser.newContext({
     viewport: { width: 390, height: 844 },
@@ -97,7 +111,9 @@ try {
   await phone.waitForTimeout(400)
   await shot(phone, 'mobile-studio.png')
   await phone.goto(`${base}/demo-dashboard`, { waitUntil: 'networkidle' })
-  await expect(phone.getByRole('heading', { level: 1 })).toContainText('A place for')
+  await expect(phone.getByRole('heading', { level: 1 })).toContainText('Workshop overview')
+  await phone.getByRole('button', { name: 'Load sample enquiries' }).click()
+  await phone.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }))
   expect(await phone.evaluate(() => document.documentElement.scrollWidth)).toBe(390)
   await shot(phone, 'mobile-dashboard.png', { fullPage: true })
   expect(issues).toEqual([])

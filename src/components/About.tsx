@@ -6,11 +6,11 @@ export default function About() {
     <section id="about" className="about-section section-pad">
       <Reveal className="about-image">
         <img
-          src="/images/charl-clock-real.jpg"
-          alt="Charl's actual ornamental wooden clock photographed beside a plant"
+          src="/images/studio/clock-studio.webp"
+          alt="AI studio visualisation based on Charl's ornamental wooden clock"
           loading="lazy"
         />
-        <span className="about-photo-label">From Charl’s own collection</span>
+        <span className="about-photo-label">AI studio study · based on Charl’s original</span>
       </Reveal>
       <Reveal className="about-copy" delay={0.1}>
         <SectionLabel light>04 / The hands behind the work</SectionLabel>

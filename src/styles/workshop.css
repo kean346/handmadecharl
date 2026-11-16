@@ -1,0 +1,1956 @@
+/* The workshop edition: walnut, moss and copper. Compositions wipe as a whole. */
+.workshop-site {
+  --cream: #eadfcd;
+  --ivory: #eee5d7;
+  --copper: #ab7547;
+  --timber: #c2a174;
+  --brown: #37291e;
+  --muted: #81725f;
+  --line: #7f624330;
+  background: #eadfcd;
+  color: var(--brown);
+}
+.workshop-site .site-header {
+  height: 88px;
+  background: transparent;
+  color: #f1e9d8;
+  border-color: #f9ecce29;
+}
+.workshop-site .site-header .brand small {
+  color: #dac4a2;
+}
+.workshop-site .desktop-nav {
+  gap: 25px;
+  margin-right: 30px;
+}
+.workshop-site .nav-link {
+  font-size: 11px;
+}
+.workshop-site .nav-workbench {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-left: 1px solid #e9d4ae35;
+  padding-left: 22px;
+  margin-left: 1px;
+}
+.workshop-site .nav-link::after {
+  background: #d3b184;
+}
+.workshop-site .header-quote {
+  background: #ead5b1;
+  color: #4d3823;
+  border-color: #ead5b1;
+  font-size: 10px;
+  padding: 11px 17px;
+  gap: 18px;
+}
+.workshop-site .header-quote:hover {
+  background: #f3e6d0;
+}
+.workshop-site .site-header.is-scrolled {
+  background: #e8ddccec;
+  height: 76px;
+  color: #4d3b28;
+  border-color: #82684b2a;
+}
+.workshop-site .site-header.is-scrolled .brand small {
+  color: #9c8464;
+}
+.workshop-site .site-header.is-scrolled .nav-workbench {
+  border-color: #9a805e42;
+}
+.workshop-site .site-header.is-scrolled .header-quote {
+  background: #59432c;
+  color: #f2e6cf;
+  border-color: #59432c;
+}
+.workshop-site .mobile-nav {
+  background: #e8ddcc;
+  color: #4d3b28;
+}
+.workshop-site .mobile-crm-link {
+  color: #916838;
+}
+.workshop-site .mobile-menu-toggle:hover {
+  background: #ead5b11c;
+}
+.hero.hero-v2 {
+  height: 100svh;
+  min-height: 820px;
+  max-height: 1060px;
+  isolation: isolate;
+  position: relative;
+  overflow: hidden;
+  --thumb-active: 110px;
+  --thumb-small: 58px;
+  background: #38271d;
+  perspective: 1200px;
+}
+.hero-v2 .hero-scene {
+  background: none;
+  will-change: mask-image;
+}
+.hero-v2 .v2-scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.hero-v2 .hero-photograph {
+  position: absolute;
+  inset: 50px -2% -90px;
+  width: auto;
+  height: auto;
+  display: block;
+  transform-style: preserve-3d;
+  perspective: 1200px;
+  max-height: none;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  overflow: hidden;
+  will-change: transform;
+  margin: 0;
+}
+.hero-v2 .hero-photograph::after {
+  display: none;
+}
+.hero-v2 .hero-photograph > img {
+  height: 100%;
+  width: 100%;
+  max-height: none;
+  max-width: none;
+  object-fit: cover;
+  filter: none;
+  position: static;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transform-origin: 70% 60%;
+  will-change: transform;
+}
+.hero-v2 .hero-top-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #181b1880 0%, #211e1b18 24%, transparent 45%);
+  pointer-events: none;
+}
+.hero-v2 .hero-studio-tint {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.hero-v2 .hero-lower-blend {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  pointer-events: none;
+}
+.hero-v2 .hero-copy {
+  top: 25%;
+  left: var(--gutter);
+  width: 72%;
+  z-index: 3;
+  pointer-events: none;
+}
+.hero-kicker {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 8px;
+  color: #d5bb90;
+  margin-bottom: 29px;
+}
+.hero-kicker > span:first-child {
+  width: 26px;
+  height: 1px;
+  background: #d4ac70;
+  display: block;
+}
+.hero-v2 h1 {
+  font-size: clamp(68px, 6.7vw, 119px);
+  line-height: 0.91;
+  letter-spacing: -0.045em;
+  font-weight: 500;
+  max-width: none;
+  text-transform: uppercase;
+}
+.hero-v2 .headline-line {
+  white-space: nowrap;
+  display: block;
+  color: #f9efdb;
+  font-weight: 500;
+  font-style: normal;
+}
+.hero-v2 .headline-line.line-1 {
+  font-style: normal;
+  font-weight: 500;
+  color: #eddcba;
+}
+.hero-v2 .word-mask {
+  padding-bottom: 0.15em;
+  margin-bottom: -0.15em;
+}
+.hero-v2 .word-mask > span {
+  background: linear-gradient(180deg, #fcf5e9 8%, #f2e5ccf5 44%, #e2c99f45 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-v2 .word-space {
+  width: 0.19em;
+}
+.hero-v2 .hero-description {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #dccbad;
+  max-width: 290px;
+  margin-top: 29px;
+}
+.hero-v2 .hero-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 26px;
+  align-items: center;
+  margin-top: 27px;
+}
+.hero-v2 .hero-actions .button {
+  background: #c29155;
+  border: 1px solid #c29155;
+  color: #261f16;
+  min-height: 49px;
+  font-size: 10px;
+  padding: 14px 21px;
+  font-weight: 500;
+  gap: 24px;
+}
+.hero-v2 .hero-actions .button:hover {
+  background: #d9ad75;
+  border-color: #d9ad75;
+}
+.hero-v2 .hero-actions .text-link {
+  font-size: 9px;
+  color: #e0ccaa;
+  gap: 11px;
+}
+.hero-scene-story {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 16%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 3;
+  color: #e1c9a4;
+  max-width: 380px;
+}
+.hero-story-rule {
+  height: 67px;
+  width: 2px;
+  background: #c59e66;
+  display: block;
+  flex-shrink: 0;
+}
+.hero-scene-story .tiny-label {
+  font-size: 6px;
+  letter-spacing: 0.16em;
+  color: #b59a72;
+}
+.hero-scene-story strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 27px;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  margin: 8px 0 5px;
+}
+.hero-scene-story p {
+  font-size: 9px;
+  color: #bca481;
+  line-height: 1.7;
+}
+.v2-scene-rail {
+  position: absolute;
+  right: 3%;
+  top: 32%;
+  width: var(--thumb-active);
+  z-index: 10;
+  pointer-events: none;
+}
+.v2-rail-inner {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  pointer-events: auto;
+}
+.hero-v2 .scene-thumbnail {
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 50%;
+  padding: 0;
+  transition: none;
+  isolation: isolate;
+  pointer-events: auto;
+}
+.hero-v2 .scene-thumbnail::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border: 1px solid #ecd3a443;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+.hero-v2 .scene-thumbnail.active::after {
+  opacity: 1;
+}
+.hero-v2 .thumbnail-inner {
+  border: 2px solid #f3dfb9d9;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+  overflow: hidden;
+  background: #302f24;
+  box-shadow: 0 7px 20px #171b174d;
+}
+.hero-v2 .thumbnail-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: none;
+}
+.hero-v2 .scene-thumbnail:hover img,
+.hero-v2 .scene-thumbnail.active img {
+  transform: none;
+  filter: none;
+}
+.hero-v2 .thumbnail-number {
+  position: absolute;
+  right: 1px;
+  bottom: 0;
+  width: 19px;
+  height: 19px;
+  background: #e6d1ab;
+  border-radius: 50%;
+  font-size: 6px;
+  letter-spacing: 0;
+  color: #665133;
+  display: grid;
+  place-items: center;
+}
+.hero-v2 .scene-thumbnail.active .thumbnail-number {
+  width: 24px;
+  height: 24px;
+  font-size: 7px;
+  right: 2px;
+  bottom: 2px;
+}
+.rail-orbits {
+  position: absolute;
+  left: 50%;
+  pointer-events: none;
+  z-index: -1;
+  height: 0;
+}
+.rail-orbits > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: calc(var(--thumb-active) + 130px);
+  height: calc(var(--thumb-active) + 130px);
+  border: 1px solid #f1d9ad38;
+  border-radius: 50%;
+  transition: border-color 0.6s;
+}
+.rail-orbits > span:last-child {
+  width: calc(var(--thumb-active) + 310px);
+  height: calc(var(--thumb-active) + 310px);
+  border-color: #f1d9ad25;
+}
+.rail-connector {
+  position: absolute;
+  left: -60px;
+  width: 43px;
+  height: 2px;
+  background: #e5c797;
+  transform-origin: right center;
+  pointer-events: none;
+  border-radius: 2px;
+}
+.hero-transition-haze {
+  position: absolute;
+  top: -10%;
+  bottom: -10%;
+  width: 36vw;
+  background: radial-gradient(ellipse at center, #efbd84b0, transparent 68%);
+  filter: blur(17px);
+  z-index: 6;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+.hero-v2 .hero-footer {
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: 28px;
+  z-index: 12;
+  border-top: 1px solid #d3b68826;
+  padding-top: 22px;
+  color: #c6ad86;
+}
+.hero-v2 .scroll-cue {
+  font-size: 7px;
+  letter-spacing: 0.12em;
+  color: #c4ab85;
+}
+.hero-v2 .scroll-arrow {
+  border-color: #e1c69a42;
+  width: 24px;
+  height: 34px;
+  color: #ddbe8a;
+}
+.hero-v2 .scene-counter {
+  color: #a08660;
+  font-size: 8px;
+}
+.hero-v2 .current-scene {
+  color: #e8d7b9;
+  font-size: 26px;
+}
+.hero-v2 .counter-rule {
+  background: #d2ad714a;
+  width: 70px;
+}
+.hero-v2 .hero-prev-next {
+  margin-left: 16px;
+  gap: 7px;
+}
+.hero-v2 .hero-prev-next button {
+  width: 32px;
+  height: 32px;
+  color: #d3b788;
+  border-color: #d0ac7538;
+}
+.hero-v2 .hero-prev-next button:hover {
+  background: #f1d5a51a;
+}
+.hero-ai-note {
+  text-align: right;
+  font-size: 7px;
+  color: #a88d64;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.hero-ai-note > span {
+  display: block;
+  font-family: var(--serif);
+  font-size: 12px;
+  color: #c7af8a;
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-top: 6px;
+}
+.hero-v2 .hero-scene-story,
+.hero-v2 .hero-copy {
+  pointer-events: none;
+}
+.hero-v2 .hero-copy a {
+  pointer-events: auto;
+}
+/* Collection cards are tactile windows, opening into a full-screen product study. */
+.workshop-site .craft-ribbon {
+  background: var(--hero-theme);
+  color: #c2a784;
+  border-color: #d9b17c20;
+  transition: background 1.25s cubic-bezier(0.65, 0, 0.35, 1);
+  height: 66px;
+}
+.workshop-site .craft-ribbon > span {
+  font-size: 8px;
+  letter-spacing: 0.15em;
+}
+.workshop-site .craft-ribbon i {
+  background: #d5b27e;
+}
+.workshop-site .collection {
+  background: var(--hero-theme);
+  color: #f1e4cf;
+  transition: background 1.25s cubic-bezier(0.65, 0, 0.35, 1);
+  padding-top: 76px;
+  padding-bottom: 65px;
+  border-top: 1px solid #c8a06c1a;
+}
+.workshop-site .collection .eyebrow {
+  color: #c9a36e;
+}
+.workshop-site .collection h2 {
+  font-size: clamp(49px, 4.2vw, 70px);
+}
+.workshop-site .collection h2 em {
+  color: #c7a070;
+}
+.workshop-site .collection .section-heading > p {
+  color: #bba281;
+  font-size: 11px;
+  max-width: 315px;
+}
+.workshop-site .featured-grid {
+  gap: 24px;
+  perspective: 1400px;
+}
+.workshop-site .featured-card {
+  height: 445px;
+  border-radius: 3px;
+  background: #473828;
+  box-shadow: 0 20px 30px #15190f24;
+  will-change: transform;
+  transition: box-shadow 0.5s;
+}
+.workshop-site .featured-card:hover {
+  box-shadow: 0 25px 45px #11140d4d;
+}
+.workshop-site .featured-card::after {
+  background: linear-gradient(180deg, #1b1a1740 0%, transparent 30%, #1e211f10 45%, #181d18cf 100%);
+}
+.workshop-site .featured-image {
+  border-radius: 3px;
+}
+.workshop-site .featured-image > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.83);
+  transition:
+    transform 1.25s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.7s;
+}
+.workshop-site .featured-card:hover .featured-image > img {
+  transform: scale(1.07);
+  filter: saturate(1.05);
+}
+.workshop-site .featured-number {
+  top: 24px;
+  left: 24px;
+  font-family: Consolas, monospace;
+  font-size: 8px;
+  color: #e3cda6;
+}
+.studio-image-badge {
+  position: absolute;
+  top: 19px;
+  right: 17px;
+  font-size: 6px;
+  font-family: Consolas, monospace;
+  letter-spacing: 0.11em;
+  color: #e8d3ad;
+  z-index: 2;
+  border: 1px solid #d1ae7752;
+  padding: 5px 6px;
+  pointer-events: none;
+  background: #2c2d2142;
+}
+.workshop-site .featured-card > .studio-image-badge {
+  top: 21px;
+  right: 20px;
+  font-size: 6px;
+}
+.featured-open-hint {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  color: #f5e6cc;
+  pointer-events: none;
+}
+.featured-open-hint > span {
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.featured-open-hint::before {
+  content: '';
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 1px solid #f4d6a75c;
+  position: absolute;
+  transform: translateX(-8px);
+  background: #282e1e33;
+  backdrop-filter: blur(3px);
+  z-index: -1;
+}
+.workshop-site .featured-copy {
+  left: 25px;
+  bottom: 30px;
+  right: 65px;
+}
+.workshop-site .featured-caption {
+  font-size: 7px;
+  letter-spacing: 0.12em;
+  color: #dac39c;
+  margin-bottom: 11px;
+}
+.workshop-site .featured-title {
+  font-size: 43px;
+  letter-spacing: -0.03em;
+  color: #f1e4ce;
+  max-width: 245px;
+}
+.featured-reveal-line {
+  height: 1px;
+  background: #e6c49280;
+  display: block;
+  margin-top: 18px;
+  transform-origin: left;
+}
+.workshop-site .featured-card > .round-arrow {
+  width: 37px;
+  height: 37px;
+  right: 24px;
+  bottom: 31px;
+  background: transparent;
+  border-color: #e7cca67a;
+  color: #ead4b1;
+}
+.workshop-site .featured-card:hover > .round-arrow {
+  background: #dac09a;
+  color: #3d3525;
+  transform: rotate(45deg);
+}
+.collection-provenance {
+  font-size: 8px;
+  color: #9f8968;
+  line-height: 1.9;
+  max-width: 550px;
+  margin-top: 21px;
+}
+.workshop-site .decorative-link {
+  margin-top: 25px;
+  color: #ccac7c;
+}
+.workshop-site .decorative-link .tiny-label {
+  color: #9e8b6a;
+  font-size: 7px;
+}
+.workshop-site .decorative-line {
+  background: #ceb07f26;
+}
+.workshop-site .work-section {
+  background: #e2d4be;
+  border-top: 1px solid #9a805d34;
+  padding-top: 80px;
+}
+.workshop-site .work-section .section-heading > p {
+  font-size: 12px;
+  color: #89755a;
+}
+.workshop-site .work-section h2 em {
+  color: #9c713d;
+}
+.workshop-site .gallery-filters > button {
+  font-size: 10px;
+  min-height: 36px;
+  color: #907c60;
+}
+.workshop-site .gallery-filters > button.selected {
+  background: #534b35;
+  color: #ede0c6;
+  border-color: #534b35;
+}
+.workshop-site .product-image {
+  background: #332d20;
+  border-radius: 3px;
+}
+.workshop-site .product-image.studio-view img {
+  height: 100%;
+  width: 100%;
+  filter: saturate(0.83);
+  object-fit: cover;
+}
+.workshop-site .product-card:hover .product-image.studio-view img {
+  filter: saturate(1.05);
+  transform: scale(1.065);
+}
+.workshop-site .product-name {
+  font-size: 25px;
+  color: #5e4b32;
+}
+.workshop-site .product-info small {
+  color: #99723f;
+}
+.workshop-site .gallery-count {
+  color: #94784e;
+}
+.workshop-site .archive-note {
+  color: #9e8967;
+  font-size: 9px;
+  max-width: 720px;
+}
+.workshop-site .personalise-section {
+  background: #ded0b8;
+}
+.workshop-site .engraving-preview {
+  background: #c9b693;
+}
+.workshop-site .personalise-heading > p {
+  color: #907957;
+}
+.workshop-site .preview-topline {
+  color: #8f754d;
+}
+.workshop-site .preview-disclaimer {
+  color: #8f7953;
+}
+.workshop-site .personalise-continue,
+.workshop-site .quote-submit {
+  background: #4b4b33;
+  color: #f1e2c5;
+}
+.workshop-site .personalise-continue:hover,
+.workshop-site .quote-submit:hover {
+  background: #6b6745;
+}
+.workshop-site .about-section {
+  background: #292f24;
+}
+.workshop-site .about-image {
+  border-radius: 3px;
+}
+.workshop-site .about-image img {
+  object-fit: cover;
+  object-position: 72% center;
+  filter: none;
+}
+.workshop-site .about-copy h2 em {
+  color: #bda36f;
+}
+.workshop-site .about-copy p {
+  color: #b9b49a;
+}
+.workshop-site .charl-signature {
+  color: #bda36f;
+}
+.workshop-site .contact-section {
+  background: #e6dac5;
+}
+.workshop-site .contact-intro h2 em {
+  color: #99703e;
+}
+.workshop-site .site-footer {
+  background: #d6c3a4;
+}
+.workshop-site .footer-top {
+  border-color: #a48b5e42;
+}
+.workshop-site .footer-bottom {
+  color: #9c835c;
+}
+.workshop-site .footer-bottom > a {
+  color: #7c6440;
+}
+.workshop-site .back-to-top {
+  border-color: #aa8d5b66;
+}
+.workshop-site .footer-top .brand small {
+  color: #8f7850;
+}
+/* The card image travels into a full-screen study, not another small card. */
+.modal-backdrop:has(.product-detail-v2) {
+  padding: 0;
+  background: #e4d4b8;
+  backdrop-filter: none;
+  align-items: stretch;
+  overflow: hidden;
+}
+.product-detail-v2 {
+  max-width: none;
+  max-height: 100dvh;
+  height: 100dvh;
+  width: 100%;
+  background: #e6d8c1;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  grid-template-rows: 77px minmax(0, 1fr);
+  box-shadow: none;
+  border-radius: 0;
+}
+.detail-page-header {
+  grid-column: 1/-1;
+  grid-row: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 85px 0 4.5vw;
+  border-bottom: 1px solid #ac926a3b;
+  color: #8d7550;
+  background: #e8dcc8;
+  z-index: 3;
+}
+.detail-page-header > span {
+  font-family: Consolas, monospace;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.detail-back {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  color: #7f6744;
+}
+.detail-back > svg {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+.detail-back:hover > svg {
+  transform: rotate(180deg) translateX(4px);
+}
+.product-detail-v2 > .modal-close {
+  top: 21px;
+  right: 28px;
+  width: 35px;
+  height: 35px;
+  border-color: #b69b7070;
+  background: transparent;
+}
+.product-detail-v2 .detail-visual {
+  padding: 28px 4.5vw 22px;
+  min-height: 0;
+  background: #322e22;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.detail-image-modes {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.detail-image-modes > button {
+  font-size: 9px;
+  color: #a99876;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #c6ab7340;
+  transition:
+    color 0.3s,
+    background 0.3s;
+  border-radius: 2px;
+}
+.detail-image-modes > button[aria-pressed='true'] {
+  background: #cdb286;
+  color: #4a3e27;
+  border-color: #cdb286;
+}
+.detail-image-modes > button:hover {
+  border-color: #dbbd86;
+}
+.product-detail-v2 .detail-main-image {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  max-height: none;
+  overflow: hidden;
+  background: #322e22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-detail-v2 .detail-main-image > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  max-height: none;
+  max-width: 100%;
+  filter: none;
+}
+.product-detail-v2 .detail-thumbnails {
+  margin-top: 14px;
+  gap: 10px;
+}
+.product-detail-v2 .detail-thumbnails > button {
+  height: 52px;
+  width: 46px;
+  padding: 3px;
+  border-color: #c9b18326;
+}
+.product-detail-v2 .detail-thumbnails > button.selected {
+  border-color: #d9bc83;
+}
+.product-detail-v2 .detail-thumbnails img {
+  object-fit: cover;
+}
+.detail-visual-disclaimer {
+  font-size: 8px;
+  color: #938563;
+  text-align: center;
+  margin-top: 12px;
+  line-height: 1.7;
+}
+.product-detail-v2 .detail-copy {
+  padding: 50px 6vw 50px 5vw;
+  overflow-y: auto;
+  justify-content: center;
+  background: #e6d8c1;
+}
+.product-detail-v2 .detail-copy .eyebrow {
+  font-size: 8px;
+  color: #a48756;
+}
+.product-detail-v2 .detail-copy h2 {
+  font-size: clamp(54px, 5.5vw, 88px);
+  line-height: 0.93;
+  letter-spacing: -0.05em;
+  margin: 32px 0 25px;
+  color: #51432c;
+}
+.product-detail-v2 .detail-copy > p:not(.archive-note):not(.detail-footnote) {
+  font-size: 13px;
+  color: #9b8460;
+  line-height: 1.85;
+}
+.product-detail-v2 .detail-material {
+  font-size: 10px;
+  color: #997f56;
+  border-color: #ae916342;
+  padding: 20px 0;
+  margin-top: 29px;
+}
+.product-detail-v2 .detail-footnote {
+  font-size: 9px;
+  color: #a78e63;
+  margin: 21px 0 30px;
+}
+.product-detail-v2 .detail-copy > .button {
+  background: #6c6742;
+  color: #f0e0c0;
+  padding: 17px 22px;
+  font-size: 11px;
+  min-height: 54px;
+}
+.product-detail-v2 .detail-copy > .button:hover {
+  background: #85805a;
+}
+.product-detail-v2 .detail-copy > .archive-note {
+  font-size: 9px;
+  line-height: 1.9;
+  color: #ac946c;
+  margin-top: 23px;
+}
+.detail-craft-signature {
+  font-family: Allura, cursive;
+  font-size: 31px;
+  color: #ad956b;
+  margin-top: 35px;
+  transform: rotate(-3deg);
+}
+@media (min-width: 1700px) {
+  .hero.hero-v2 {
+    min-height: 900px;
+    max-height: 1200px;
+    --thumb-active: 138px;
+    --thumb-small: 71px;
+  }
+  .hero-v2 .hero-copy {
+    top: 27%;
+  }
+  .hero-v2 h1 {
+    font-size: 7vw;
+  }
+  .hero-v2 .hero-description {
+    font-size: 14px;
+    max-width: 340px;
+  }
+  .hero-kicker {
+    font-size: 10px;
+  }
+  .hero-v2 .hero-actions .button {
+    font-size: 12px;
+    padding: 17px 25px;
+  }
+  .hero-v2 .hero-actions .text-link {
+    font-size: 11px;
+  }
+  .v2-scene-rail {
+    right: 4%;
+    top: 33%;
+  }
+  .hero-scene-story strong {
+    font-size: 32px;
+  }
+  .hero-scene-story p {
+    font-size: 11px;
+  }
+  .hero-scene-story .tiny-label {
+    font-size: 8px;
+  }
+  .hero-v2 .hero-footer {
+    bottom: 35px;
+  }
+  .hero-v2 .scroll-cue {
+    font-size: 9px;
+  }
+  .hero-ai-note {
+    font-size: 8px;
+  }
+  .hero-ai-note > span {
+    font-size: 15px;
+  }
+  .workshop-site .featured-card {
+    height: 510px;
+  }
+  .workshop-site .featured-title {
+    font-size: 51px;
+  }
+}
+@media (max-width: 1150px) {
+  .workshop-site .desktop-nav {
+    gap: 19px;
+    margin-right: 23px;
+  }
+  .workshop-site .nav-link {
+    font-size: 10px;
+  }
+  .workshop-site .nav-workbench {
+    padding-left: 16px;
+  }
+  .hero.hero-v2 {
+    min-height: 760px;
+    --thumb-active: 91px;
+    --thumb-small: 50px;
+  }
+  .hero-v2 h1 {
+    font-size: 7.1vw;
+  }
+  .hero-v2 .hero-copy {
+    top: 27%;
+  }
+  .hero-v2 .hero-description {
+    font-size: 11px;
+    max-width: 260px;
+  }
+  .hero-v2 .hero-actions {
+    gap: 20px;
+  }
+  .hero-v2 .hero-actions .button {
+    font-size: 9px;
+    gap: 18px;
+    padding: 13px 18px;
+  }
+  .hero-v2 .hero-actions .text-link {
+    font-size: 8px;
+  }
+  .hero-scene-story {
+    bottom: 16%;
+  }
+  .hero-scene-story strong {
+    font-size: 25px;
+  }
+  .hero-scene-story p {
+    font-size: 8px;
+  }
+  .v2-scene-rail {
+    top: 35%;
+    right: 3%;
+  }
+  .v2-rail-inner {
+    gap: 20px;
+  }
+  .rail-connector {
+    left: -48px;
+    width: 32px;
+  }
+  .rail-orbits > span {
+    width: calc(var(--thumb-active) + 110px);
+    height: calc(var(--thumb-active) + 110px);
+  }
+  .rail-orbits > span:last-child {
+    width: calc(var(--thumb-active) + 270px);
+    height: calc(var(--thumb-active) + 270px);
+  }
+  .hero-ai-note {
+    font-size: 6px;
+  }
+  .hero-ai-note > span {
+    font-size: 10px;
+  }
+  .workshop-site .featured-card {
+    height: 390px;
+  }
+  .workshop-site .featured-title {
+    font-size: 38px;
+  }
+  .workshop-site .featured-copy {
+    left: 23px;
+    right: 51px;
+  }
+  .workshop-site .featured-card > .round-arrow {
+    width: 31px;
+    height: 31px;
+    right: 19px;
+    bottom: 31px;
+  }
+  .product-detail-v2 .detail-copy {
+    padding: 40px;
+  }
+  .product-detail-v2 .detail-copy h2 {
+    font-size: 59px;
+  }
+  .product-detail-v2 .detail-copy > p:not(.archive-note):not(.detail-footnote) {
+    font-size: 12px;
+  }
+  .detail-image-modes > button {
+    font-size: 8px;
+    padding: 8px 10px;
+  }
+}
+@media (max-width: 950px) {
+  .workshop-site .desktop-nav {
+    gap: 17px;
+    margin-right: 22px;
+  }
+  .workshop-site .nav-workbench {
+    font-size: 0;
+    gap: 0;
+    padding: 11px 0 11px 17px;
+  }
+  .workshop-site .nav-workbench > svg {
+    width: 16px;
+    height: 16px;
+  }
+  .workshop-site .nav-workbench::after {
+    display: none;
+  }
+  .workshop-site .header-quote {
+    font-size: 9px;
+    padding: 10px 13px;
+    gap: 13px;
+  }
+  .hero.hero-v2 {
+    min-height: 740px;
+    --thumb-active: 76px;
+    --thumb-small: 43px;
+  }
+  .hero-v2 .hero-copy {
+    top: 28%;
+  }
+  .hero-kicker {
+    font-size: 7px;
+    margin-bottom: 25px;
+    gap: 11px;
+  }
+  .hero-v2 h1 {
+    font-size: 7.4vw;
+  }
+  .hero-v2 .hero-actions {
+    flex-direction: column;
+    align-items: start;
+    gap: 13px;
+    margin-top: 23px;
+  }
+  .hero-v2 .hero-actions .text-link {
+    margin-left: 3px;
+    font-size: 8px;
+  }
+  .hero-scene-story {
+    bottom: 14.5%;
+    gap: 14px;
+  }
+  .hero-story-rule {
+    height: 55px;
+  }
+  .hero-scene-story strong {
+    font-size: 23px;
+  }
+  .hero-scene-story p {
+    font-size: 8px;
+    max-width: 260px;
+  }
+  .hero-v2 .hero-footer {
+    bottom: 25px;
+    padding-top: 18px;
+  }
+  .hero-v2 .scroll-cue {
+    font-size: 6px;
+    gap: 8px;
+  }
+  .hero-v2 .scene-counter {
+    gap: 9px;
+    font-size: 7px;
+  }
+  .hero-v2 .counter-rule {
+    width: 45px;
+  }
+  .hero-v2 .hero-prev-next {
+    margin-left: 8px;
+  }
+  .hero-v2 .hero-prev-next button {
+    width: 28px;
+    height: 28px;
+  }
+  .hero-ai-note {
+    font-size: 5px;
+    letter-spacing: 0.08em;
+    max-width: 150px;
+    line-height: 1.7;
+  }
+  .hero-ai-note > span {
+    font-size: 9px;
+  }
+  .hero-v2 .hero-description {
+    font-size: 10px;
+    max-width: 245px;
+  }
+  .v2-scene-rail {
+    top: 36%;
+    right: 2.6%;
+  }
+  .v2-rail-inner {
+    gap: 19px;
+  }
+  .rail-connector {
+    left: -38px;
+    width: 25px;
+  }
+  .rail-orbits > span {
+    width: calc(var(--thumb-active) + 95px);
+    height: calc(var(--thumb-active) + 95px);
+  }
+  .rail-orbits > span:last-child {
+    width: calc(var(--thumb-active) + 230px);
+    height: calc(var(--thumb-active) + 230px);
+  }
+  .workshop-site .craft-ribbon > span {
+    font-size: 7px;
+  }
+  .workshop-site .collection {
+    padding-top: 65px;
+  }
+  .workshop-site .collection .section-heading > p {
+    font-size: 10px;
+    max-width: 235px;
+  }
+  .workshop-site .collection h2 {
+    font-size: 53px;
+  }
+  .workshop-site .featured-grid {
+    gap: 15px;
+  }
+  .workshop-site .featured-card {
+    height: 350px;
+  }
+  .workshop-site .featured-title {
+    font-size: 33px;
+  }
+  .workshop-site .featured-copy {
+    left: 19px;
+    right: 43px;
+    bottom: 26px;
+  }
+  .workshop-site .featured-caption {
+    font-size: 6px;
+    max-width: 130px;
+    line-height: 1.8;
+  }
+  .workshop-site .featured-card > .round-arrow {
+    width: 27px;
+    height: 27px;
+    right: 14px;
+    bottom: 26px;
+  }
+  .workshop-site .featured-card > .studio-image-badge {
+    font-size: 5px;
+    right: 14px;
+    top: 20px;
+    padding: 4px;
+  }
+  .workshop-site .featured-number {
+    left: 18px;
+    font-size: 7px;
+    top: 23px;
+  }
+  .featured-open-hint > span {
+    font-size: 8px;
+  }
+  .featured-open-hint > svg {
+    width: 17px;
+  }
+  .featured-open-hint::before {
+    height: 90px;
+    width: 90px;
+  }
+  .collection-provenance {
+    font-size: 7px;
+    max-width: 480px;
+  }
+  .product-detail-v2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .product-detail-v2 .detail-copy {
+    padding: 35px 29px;
+  }
+  .product-detail-v2 .detail-copy h2 {
+    font-size: 51px;
+  }
+  .product-detail-v2 .detail-copy > p:not(.archive-note):not(.detail-footnote) {
+    font-size: 11px;
+  }
+  .detail-page-header {
+    padding-left: 4vw;
+  }
+  .detail-page-header > span {
+    font-size: 7px;
+  }
+  .product-detail-v2 .detail-visual {
+    padding: 24px;
+  }
+  .detail-image-modes {
+    gap: 8px;
+  }
+  .detail-image-modes > button {
+    font-size: 7px;
+    padding: 8px;
+  }
+  .detail-image-modes > button > svg {
+    width: 12px;
+  }
+  .detail-visual-disclaimer {
+    font-size: 7px;
+  }
+  .product-detail-v2 .detail-material {
+    font-size: 8px;
+  }
+  .product-detail-v2 .detail-footnote {
+    font-size: 8px;
+  }
+  .product-detail-v2 .detail-copy > .archive-note {
+    font-size: 8px;
+  }
+  .detail-craft-signature {
+    font-size: 27px;
+  }
+}
+@media (max-width: 700px) {
+  .workshop-site .site-header,
+  .workshop-site .site-header.is-scrolled {
+    height: 76px;
+  }
+  .workshop-site .site-header .brand > span {
+    font-size: 24px;
+  }
+  .workshop-site .site-header .brand-by {
+    font-size: 22px;
+  }
+  .workshop-site .site-header .brand small {
+    font-size: 5px;
+    letter-spacing: 0.21em;
+  }
+  .workshop-site .header-quote {
+    font-size: 8px;
+    gap: 8px;
+    padding: 9px 11px;
+    min-height: 35px;
+    margin-right: 14px;
+  }
+  .workshop-site .header-quote svg {
+    width: 13px;
+  }
+  .workshop-site .mobile-menu-toggle {
+    color: inherit;
+    width: 28px;
+  }
+  .workshop-site .mobile-nav {
+    top: 75px;
+    padding-top: 18px;
+  }
+  .workshop-site .mobile-nav > a {
+    font-size: 32px;
+    padding: 13px 0;
+  }
+  .workshop-site .mobile-nav > a > small {
+    font-size: 8px;
+  }
+  .workshop-site .mobile-nav .mobile-crm-link {
+    color: #96703e;
+  }
+  .hero.hero-v2 {
+    height: 920px;
+    min-height: 920px;
+    max-height: none;
+    --thumb-active: 62px;
+    --thumb-small: 38px;
+  }
+  .hero-v2 .hero-copy {
+    left: 23px;
+    right: 20px;
+    top: 137px;
+    width: auto;
+  }
+  .hero-kicker {
+    font-size: 6px;
+    gap: 10px;
+    letter-spacing: 0.12em;
+    margin-bottom: 24px;
+  }
+  .hero-kicker > span:first-child {
+    width: 21px;
+  }
+  .hero-v2 h1 {
+    font-size: 11.55vw;
+    line-height: 0.95;
+    letter-spacing: -0.047em;
+  }
+  .hero-v2 .headline-line {
+    white-space: nowrap;
+  }
+  .hero-v2 .headline-line.line-1 {
+    font-size: inherit;
+  }
+  .hero-v2 .hero-description {
+    font-size: 11px;
+    line-height: 1.85;
+    max-width: 270px;
+    margin-top: 21px;
+    color: #cdb58f;
+  }
+  .hero-v2 .hero-actions {
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    margin-top: 23px;
+  }
+  .hero-v2 .hero-actions .button {
+    font-size: 9px;
+    min-height: 43px;
+    gap: 15px;
+    padding: 12px 15px;
+  }
+  .hero-v2 .hero-actions .text-link {
+    font-size: 7px;
+    max-width: 125px;
+    gap: 7px;
+    line-height: 1.8;
+    margin: 0;
+  }
+  .hero-v2 .hero-actions .text-link > svg {
+    width: 13px;
+  }
+  .hero-v2 .hero-photograph {
+    inset: 342px -3% 85px;
+    width: auto;
+    height: auto;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+  }
+  .hero-v2 .hero-photograph > img {
+    object-fit: cover;
+    object-position: 90% center !important;
+    height: 100%;
+    width: 100%;
+    max-height: none;
+  }
+  .hero-v2 .hero-studio-tint {
+    background: linear-gradient(180deg, #31271d00 30%, #31271d00 55%, #31271d12 100%) !important;
+  }
+  .hero-v2 .hero-top-shade {
+    background: linear-gradient(180deg, #151b1885, transparent 35%);
+  }
+  .hero-v2 .hero-lower-blend {
+    height: 21%;
+    bottom: 0;
+  }
+  .hero-v2 .scene-0 .hero-lower-blend {
+    background: linear-gradient(0deg, #38271d 8%, #38271d88 32%, transparent 100%) !important;
+  }
+  .hero-v2 .hero-photograph {
+    mask-image: linear-gradient(180deg, transparent 0%, #000 9%, #000 88%, transparent 100%);
+  }
+  .hero-scene-story {
+    display: none;
+  }
+  .v2-scene-rail {
+    right: 4.5%;
+    top: 56%;
+    width: var(--thumb-active);
+  }
+  .v2-rail-inner {
+    gap: 16px;
+  }
+  .hero-v2 .scene-thumbnail.active::after {
+    inset: -5px;
+  }
+  .hero-v2 .thumbnail-inner {
+    border-width: 1.5px;
+    box-shadow: 0 5px 14px #10170c35;
+  }
+  .hero-v2 .thumbnail-number {
+    height: 13px;
+    width: 13px;
+    font-size: 4px;
+    right: 0;
+    bottom: 0;
+  }
+  .hero-v2 .scene-thumbnail.active .thumbnail-number {
+    height: 16px;
+    width: 16px;
+    font-size: 5px;
+    right: 0;
+    bottom: 0;
+  }
+  .rail-orbits > span {
+    width: calc(var(--thumb-active) + 76px);
+    height: calc(var(--thumb-active) + 76px);
+    border-color: #e5cc9936;
+  }
+  .rail-orbits > span:last-child {
+    width: calc(var(--thumb-active) + 180px);
+    height: calc(var(--thumb-active) + 180px);
+    border-color: #e5cc9923;
+  }
+  .rail-connector {
+    display: none;
+  }
+  .hero-transition-haze {
+    width: 50vw;
+    filter: blur(12px);
+  }
+  .hero-v2 .hero-footer {
+    left: 23px;
+    right: 23px;
+    bottom: 22px;
+    padding-top: 17px;
+    align-items: center;
+  }
+  .hero-v2 .scroll-cue {
+    font-size: 6px;
+    gap: 8px;
+    max-width: 140px;
+    line-height: 1.7;
+    letter-spacing: 0.06em;
+  }
+  .hero-v2 .scroll-arrow {
+    width: 21px;
+    height: 29px;
+  }
+  .hero-v2 .scene-counter {
+    font-size: 6px;
+    gap: 8px;
+  }
+  .hero-v2 .current-scene {
+    font-size: 23px;
+  }
+  .hero-v2 .counter-rule {
+    width: 32px;
+  }
+  .hero-v2 .hero-prev-next {
+    margin-left: 4px;
+    gap: 6px;
+  }
+  .hero-v2 .hero-prev-next button {
+    width: 27px;
+    height: 27px;
+  }
+  .hero-v2 .hero-prev-next svg {
+    width: 14px;
+  }
+  .hero-ai-note {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 61px;
+    max-width: none;
+    text-align: center;
+    font-size: 6px;
+    letter-spacing: 0.08em;
+    color: #a88b60;
+  }
+  .hero-ai-note > span {
+    font-size: 9px;
+    margin-top: 4px;
+    color: #b59b72;
+  }
+  .workshop-site .craft-ribbon {
+    height: 64px;
+  }
+  .workshop-site .craft-ribbon > span {
+    font-size: 6px;
+    letter-spacing: 0.13em;
+  }
+  .workshop-site .collection {
+    padding-top: 59px;
+    padding-bottom: 48px;
+  }
+  .workshop-site .collection .section-heading > p {
+    font-size: 11px;
+    max-width: 100%;
+  }
+  .workshop-site .collection h2 {
+    font-size: 49px;
+  }
+  .workshop-site .featured-grid {
+    gap: 22px;
+  }
+  .workshop-site .featured-card {
+    height: 420px;
+    border-radius: 3px;
+  }
+  .workshop-site .featured-card.featured-1 {
+    height: 390px;
+  }
+  .workshop-site .featured-card.featured-2 {
+    height: 370px;
+  }
+  .workshop-site .featured-title {
+    font-size: 45px;
+    max-width: 250px;
+  }
+  .workshop-site .featured-copy {
+    left: 25px;
+    bottom: 31px;
+    right: 65px;
+  }
+  .workshop-site .featured-caption {
+    font-size: 7px;
+    max-width: none;
+    margin-bottom: 10px;
+  }
+  .workshop-site .featured-card > .round-arrow {
+    width: 37px;
+    height: 37px;
+    right: 23px;
+    bottom: 31px;
+  }
+  .workshop-site .featured-number {
+    font-size: 8px;
+    top: 25px;
+    left: 25px;
+  }
+  .workshop-site .featured-card > .studio-image-badge {
+    font-size: 6px;
+    top: 22px;
+    right: 21px;
+    padding: 5px;
+  }
+  .featured-open-hint {
+    display: none;
+  }
+  .featured-reveal-line {
+    margin-top: 16px;
+  }
+  .collection-provenance {
+    font-size: 8px;
+    line-height: 1.9;
+    margin-top: 21px;
+  }
+  .workshop-site .decorative-link {
+    margin-top: 25px;
+    gap: 10px;
+  }
+  .workshop-site .decorative-link .tiny-label {
+    font-size: 7px;
+  }
+  .workshop-site .decorative-link > a {
+    font-size: 23px;
+  }
+  .workshop-site .work-section {
+    padding-top: 58px;
+  }
+  .workshop-site .work-section .section-heading > p {
+    font-size: 11px;
+    max-width: 100%;
+  }
+  .workshop-site .gallery-filters > button {
+    font-size: 9px;
+    min-height: 36px;
+    padding: 9px 10px;
+  }
+  .workshop-site .product-name {
+    font-size: 22px;
+    line-height: 1.04;
+  }
+  .workshop-site .product-info small {
+    font-size: 6px;
+  }
+  .workshop-site .studio-image-badge {
+    font-size: 5px;
+    letter-spacing: 0.05em;
+    top: 9px;
+    right: 8px;
+    padding: 4px 5px;
+  }
+  .workshop-site .archive-note {
+    font-size: 8px;
+    line-height: 1.9;
+  }
+  .workshop-site .personalise-section {
+    padding-top: 62px;
+  }
+  .workshop-site .about-image img {
+    object-position: 72% center;
+  }
+  .workshop-site .about-photo-label {
+    font-size: 6px;
+  }
+  .workshop-site .site-footer .brand small {
+    font-size: 5px;
+  }
+  .product-detail-v2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 61px auto auto;
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow-y: auto;
+    align-content: start;
+  }
+  .detail-page-header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    min-height: 61px;
+    grid-column: 1;
+    grid-row: 1;
+    padding: 0 59px 0 20px;
+    background: #e8dcc8;
+  }
+  .detail-page-header > span {
+    display: none;
+  }
+  .detail-back {
+    font-size: 9px;
+    gap: 10px;
+  }
+  .detail-back > svg {
+    width: 14px;
+  }
+  .product-detail-v2 > .modal-close {
+    position: fixed;
+    top: 14px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    z-index: 6;
+  }
+  .product-detail-v2 .detail-visual {
+    padding: 20px 22px 18px;
+    height: 460px;
+    min-height: 0;
+    grid-row: 2;
+  }
+  .detail-image-modes {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .detail-image-modes > button {
+    font-size: 8px;
+    min-height: 34px;
+    padding: 8px 11px;
+    gap: 7px;
+  }
+  .detail-image-modes > button > svg {
+    width: 13px;
+  }
+  .product-detail-v2 .detail-main-image {
+    min-height: 0;
+    flex: 1;
+    height: auto;
+    max-height: none;
+  }
+  .product-detail-v2 .detail-main-image > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    max-height: none;
+  }
+  .product-detail-v2 .detail-thumbnails {
+    margin-top: 12px;
+    gap: 9px;
+  }
+  .product-detail-v2 .detail-thumbnails > button {
+    height: 41px;
+    width: 35px;
+  }
+  .detail-visual-disclaimer {
+    font-size: 6px;
+    margin-top: 10px;
+    line-height: 1.7;
+  }
+  .product-detail-v2 .detail-copy {
+    padding: 32px 25px 39px;
+    grid-row: 3;
+    overflow: visible;
+  }
+  .product-detail-v2 .detail-copy h2 {
+    font-size: 51px;
+    line-height: 0.93;
+    margin: 23px 0;
+  }
+  .product-detail-v2 .detail-copy > p:not(.archive-note):not(.detail-footnote) {
+    font-size: 12px;
+    line-height: 1.85;
+  }
+  .product-detail-v2 .detail-copy .eyebrow {
+    font-size: 7px;
+  }
+  .product-detail-v2 .detail-material {
+    font-size: 9px;
+    margin-top: 23px;
+    padding: 18px 0;
+  }
+  .product-detail-v2 .detail-footnote {
+    font-size: 8px;
+    margin: 19px 0 24px;
+  }
+  .product-detail-v2 .detail-copy > .button {
+    font-size: 11px;
+    min-height: 52px;
+    padding: 16px 20px;
+  }
+  .product-detail-v2 .detail-copy > .archive-note {
+    font-size: 8px;
+    line-height: 1.9;
+    margin-top: 21px;
+  }
+  .detail-craft-signature {
+    font-size: 30px;
+    margin-top: 27px;
+  }
+}
+@media (max-width: 370px) {
+  .hero.hero-v2 {
+    height: 890px;
+    min-height: 890px;
+    --thumb-active: 56px;
+    --thumb-small: 35px;
+  }
+  .hero-v2 .hero-copy {
+    left: 18px;
+    right: 17px;
+    top: 132px;
+  }
+  .hero-kicker {
+    font-size: 5px;
+    letter-spacing: 0.1em;
+    gap: 8px;
+  }
+  .hero-v2 h1 {
+    font-size: 11.55vw;
+  }
+  .hero-v2 .hero-description {
+    font-size: 10px;
+    max-width: 240px;
+  }
+  .hero-v2 .hero-actions {
+    gap: 13px;
+  }
+  .hero-v2 .hero-actions .button {
+    font-size: 8px;
+    padding: 11px 13px;
+    gap: 13px;
+  }
+  .hero-v2 .hero-actions .text-link {
+    font-size: 6px;
+  }
+  .hero-v2 .hero-photograph {
+    top: 330px;
+    bottom: 83px;
+  }
+  .v2-scene-rail {
+    right: 4%;
+    top: 56%;
+  }
+  .v2-rail-inner {
+    gap: 15px;
+  }
+  .hero-v2 .hero-footer {
+    left: 18px;
+    right: 18px;
+  }
+  .hero-v2 .scroll-cue {
+    font-size: 5px;
+    max-width: 125px;
+  }
+  .hero-v2 .counter-rule {
+    width: 26px;
+  }
+  .hero-ai-note {
+    bottom: 60px;
+    font-size: 5px;
+  }
+  .workshop-site .collection h2 {
+    font-size: 44px;
+  }
+  .workshop-site .featured-card {
+    height: 385px;
+  }
+  .workshop-site .featured-card.featured-1 {
+    height: 360px;
+  }
+  .workshop-site .featured-card.featured-2 {
+    height: 340px;
+  }
+  .workshop-site .featured-title {
+    font-size: 40px;
+  }
+  .workshop-site .gallery-filters > button {
+    font-size: 8px;
+    padding: 9px;
+  }
+  .workshop-site .product-name {
+    font-size: 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-v2 .hero-photograph,
+  .hero-v2 .hero-photograph > img,
+  .hero-v2 .hero-scene,
+  .workshop-site .featured-card {
+    will-change: auto;
+  }
+  .workshop-site .featured-card:hover .featured-image > img {
+    transform: none;
+  }
+  .hero-transition-haze {
+    display: none;
+  }
+  .workshop-site .collection,
+  .workshop-site .craft-ribbon {
+    transition: none;
+  }
+}
+@media (max-width: 700px) {
+  .hero-v2 .headline-line.line-1 {
+    font-size: 9.65vw;
+    letter-spacing: -0.05em;
+  }
+  .hero-v2 .hero-copy {
+    right: 18px;
+  }
+}
+@media (max-width: 700px) {
+  .hero-v2 .scene-1 h1 {
+    font-size: 10.45vw;
+  }
+}

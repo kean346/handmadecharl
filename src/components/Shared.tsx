@@ -65,11 +65,13 @@ export function Modal({
   onClose,
   className = '',
   titleId,
+  variant = 'dialog',
 }: {
   children: ReactNode
   onClose: () => void
   className?: string
   titleId: string
+  variant?: 'dialog' | 'drawer'
 }) {
   const root = useRef<HTMLDivElement>(null)
   // Capture before the parent becomes inert in the commit phase.
@@ -111,7 +113,7 @@ export function Modal({
   }, [onClose])
   return (
     <motion.div
-      className="modal-backdrop"
+      className={`modal-backdrop ${variant === 'drawer' ? 'modal-is-drawer' : ''}`}
       initial={{ backgroundColor: 'rgba(32,25,19,0)' }}
       animate={{ backgroundColor: 'rgba(32,25,19,.62)' }}
       exit={{ backgroundColor: 'rgba(32,25,19,0)' }}
@@ -125,9 +127,13 @@ export function Modal({
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
-        initial={reduced ? false : { opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 12 }}
+        initial={
+          reduced
+            ? false
+            : { opacity: 0, y: variant === 'drawer' ? 0 : 20, x: variant === 'drawer' ? 40 : 0 }
+        }
+        animate={{ opacity: 1, y: 0, x: 0 }}
+        exit={{ opacity: 0, y: variant === 'drawer' ? 0 : 12, x: variant === 'drawer' ? 40 : 0 }}
         transition={{ duration: 0.28 }}
       >
         <button

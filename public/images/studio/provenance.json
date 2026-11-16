@@ -1,0 +1,50 @@
+{
+  "type": "AI studio visualisations, reconstructed from user-supplied product photographs",
+  "not_exact_product_photographs": true,
+  "assets": [
+    {
+      "name": "clock-studio",
+      "file": "clock-studio.webp"
+    },
+    {
+      "name": "fairy-house-studio",
+      "file": "fairy-house-studio.webp"
+    },
+    {
+      "name": "engraving-studio",
+      "file": "engraving-studio.webp"
+    },
+    {
+      "name": "fairy-house-angle-studio",
+      "file": "fairy-house-angle-studio.webp"
+    },
+    {
+      "name": "fairy-house-small-studio",
+      "file": "fairy-house-small-studio.webp"
+    },
+    {
+      "name": "engraved-spoon-owl-studio",
+      "file": "engraved-spoon-owl-studio.webp"
+    },
+    {
+      "name": "miniature-tables-studio",
+      "file": "miniature-tables-studio.webp"
+    },
+    {
+      "name": "miniature-wheelbarrow-studio",
+      "file": "miniature-wheelbarrow-studio.webp"
+    },
+    {
+      "name": "laser-cut-bug-studio",
+      "file": "laser-cut-bug-studio.webp"
+    },
+    {
+      "name": "christmas-kits-studio",
+      "file": "christmas-kits-studio.webp"
+    },
+    {
+      "name": "home-garden-studio",
+      "file": "home-garden-studio.webp"
+    }
+  ]
+}
